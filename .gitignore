@@ -2,3 +2,6 @@ textfile/
 pictures/
 excelfile/
 csvfile/
+*.xlsx
+*.csv
+*.png
