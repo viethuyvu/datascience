@@ -45,6 +45,7 @@ def get_normalize_linkage(linkage_df, detection_freq_df):
         for windowB in linkage_df.columns:
             if windowA == windowB:
                 linkage_df.loc[windowA,windowB] = np.nan
+                continue
             d = linkage_df.loc[windowA,windowB]
             if d <0:
                 d_max = min((detection_freq_df.loc[windowA])*(detection_freq_df.loc[windowB]), (1-detection_freq_df.loc[windowA])*(1-detection_freq_df.loc[windowB]))
